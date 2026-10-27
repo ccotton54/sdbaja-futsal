@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD BAJA FUTSAL CLUB | Official Website & Registration</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,800&family=Permanent+Marker&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bajaBg: '#08090d',
+                        bajaCard: '#12151e',
+                        bajaPink: '#ff007f',
+                        bajaCyan: '#00d2ff',
+                        bajaRed: '#e63946',
+                        bajaGreen: '#2a9d8f',
+                        bajaYellow: '#f4a261',
+                    },
+                    fontFamily: {
+                        street: ['"Permanent Marker"', 'cursive'],
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        display: ['"Teko"', 'sans-serif'],
+                        body: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #08090d;
+            color: #f3f4f6;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .grit-bg {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .text-glow-pink {
+            text-shadow: 0 0 15px rgba(255, 0, 127, 0.6);
+        }
+
+        .text-glow-cyan {
+            text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08090d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff007f;
+            border-radius: 4px;
+        }
+
+        .badge-angled {
+            transform: rotate(-2deg);
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(18, 21, 30, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="grit-bg antialiased selection:bg-bajaPink selection:text-white">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-bajaPink via-purple-600 to-bajaCyan text-white text-xs md:text-sm font-bold uppercase tracking-widest py-2 px-4 text-center sticky top-0 z-50">
+        <span>⚡ EXPRESSIVE • STREET • CULTURE &nbsp;|&nbsp; TIJUANA X SAN DIEGO &nbsp;⚡</span>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <nav class="bg-bajaBg/90 backdrop-blur-md border-b border-white/10 sticky top-[32px] z-40 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO BRAND -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="leading-none">
+                        <span class="font-street text-2xl sm:text-3xl tracking-wider text-white group-hover:text-bajaCyan transition-colors">SD BAJA</span>
+                        <span class="block font-display text-xs sm:text-sm tracking-widest text-bajaPink font-bold uppercase">Futsal Club - TJ x SD</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV LINKS -->
+                <div class="hidden md:flex items-center space-x-8 font-bebas text-xl tracking-wider uppercase">
+                    <a href="#hero" class="text-gray-300 hover:text-bajaCyan transition-colors">Home</a>
+                    <a href="#booking-section" class="text-bajaPink hover:text-bajaCyan transition-colors font-bold">Book Sessions</a>
+                    <a href="#pathway" class="text-gray-300 hover:text-bajaCyan transition-colors">Player Pathway</a>
+                    <a href="#programs" class="text-gray-300 hover:text-bajaCyan transition-colors">Programs</a>
+                </div>
+
+                <!-- RIGHT ACTION BUTTON -->
+                <div class="flex items-center space-x-4">
+                    <a href="#booking-section" class="bg-gradient-to-r from-bajaPink to-bajaRed hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-xl flex items-center space-x-2 transition-all shadow-lg shadow-bajaPink/20 text-sm uppercase">
+                        <i class="fa-regular fa-calendar-check text-base"></i>
+                        <span class="hidden sm:inline">Register Now</span>
+                    </a>
+
+                    <!-- MOBILE MENU BTN -->
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden md:hidden bg-bajaCard border-b border-white/10 px-4 pt-2 pb-6 space-y-3 font-bebas text-2xl uppercase">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block w-full text-left text-gray-300 hover:text-bajaCyan py-1">Home</a>
+            <a href="#booking-section" onclick="toggleMobileMenu()" class="block w-full text-left text-bajaPink hover:text-bajaCyan py-1">Book Sessions & Classes</a>
+            <a href="#pathway" onclick="toggleMobileMenu()" class="block w-full text-left text-gray-300 hover:text-bajaCyan py-1">Player Pathway</a>
+            <a href="#programs" onclick="toggleMobileMenu()" class="block w-full text-left text-gray-300 hover:text-bajaCyan py-1">Programs</a>
+        </div>
+    </nav>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-16 px-4">
+            <div class="absolute top-1/4 left-10 w-72 h-72 bg-bajaPink/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-bajaCyan/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center space-x-3 bg-black/60 border border-white/20 rounded-full px-5 py-2 mb-6 shadow-inner badge-angled">
+                    <span class="font-black tracking-widest text-white text-xs sm:text-sm">TIJUANA</span>
+                    <span class="text-bajaPink font-black text-lg">X</span>
+                    <span class="text-bajaCyan font-black text-lg">X</span>
+                    <span class="font-black tracking-widest text-white text-xs sm:text-sm">SAN DIEGO</span>
+                </div>
+
+                <h1 class="text-5xl sm:text-7xl md:text-8xl font-black italic tracking-tighter uppercase mb-2 leading-none">
+                    <span class="text-white">SD BAJA</span> <br class="sm:hidden">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-bajaCyan via-white to-bajaPink text-glow-pink font-street block sm:inline mt-2 sm:mt-0">FUTSAL CLUB</span>
+                </h1>
+
+                <p class="font-bebas text-3xl sm:text-4xl text-bajaYellow uppercase tracking-wider font-bold my-4">
+                    DIFFERENT COUNTRIES. SAME PASSION. <span class="text-bajaPink underline decoration-bajaCyan">ONE FLAIR.</span>
+                </p>
+
+                <p class="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-8">
+                    The cross-border hub for expressive futsal development, elite street play, goalkeeper mastery, and international tournaments across Tijuana & San Diego.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#booking-section" class="w-full sm:w-auto bg-gradient-to-r from-bajaPink to-bajaRed hover:opacity-90 text-white font-black text-lg uppercase px-8 py-4 rounded-xl shadow-lg shadow-bajaPink/30 transition-all transform hover:scale-105">
+                        ⚡ Book A Class / Spot
+                    </a>
+                    <a href="#pathway" class="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border-2 border-bajaCyan font-black text-lg uppercase px-8 py-4 rounded-xl transition-all transform hover:scale-105">
+                        View Player Pathway
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAYER PATHWAY SECTION -->
+        <section id="pathway" class="py-20 px-4 max-w-7xl mx-auto relative border-t border-white/10">
+            <div class="text-center mb-16">
+                <span class="font-bebas text-bajaCyan text-2xl uppercase tracking-widest font-bold">DEVELOPMENT SYSTEM</span>
+                <h2 class="text-4xl sm:text-6xl font-black uppercase text-white tracking-tight mt-1">
+                    PLAYER <span class="font-street text-bajaRed text-glow-pink">PATHWAY</span>
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base mt-2">
+                    Structured progression from early skill discovery to competitive select squads.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- STAGE 1 -->
+                <div class="bg-bajaCard border-2 border-bajaRed/40 rounded-2xl p-6 flex flex-col justify-between hover:border-bajaRed transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fa-solid fa-traffic-cone text-bajaRed text-3xl"></i>
+                            <span class="bg-bajaRed/20 text-bajaRed font-black text-xs px-2.5 py-1 rounded">STAGE 1</span>
+                        </div>
+                        <h3 class="font-street text-2xl text-white mb-2">FLASH FOUNDATION</h3>
+                        <span class="text-xs font-bold text-gray-400 block mb-3">AGES 8+ &bull; BOYS & GIRLS</span>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Introduction to futsal focusing on coordination, basic control, and love for street soccer.</p>
+                    </div>
+                    <a href="#booking-section" class="text-center bg-bajaRed/20 hover:bg-bajaRed text-bajaRed hover:text-white font-bold py-2 rounded-lg text-sm transition-colors mt-2 block">
+                        Reserve Stage 1 &rarr;
+                    </a>
+                </div>
+
+                <!-- STAGE 2 -->
+                <div class="bg-bajaCard border-2 border-bajaGreen/40 rounded-2xl p-6 flex flex-col justify-between hover:border-bajaGreen transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fa-solid fa-futbol text-bajaGreen text-3xl"></i>
+                            <span class="bg-bajaGreen/20 text-bajaGreen font-black text-xs px-2.5 py-1 rounded">STAGE 2</span>
+                        </div>
+                        <h3 class="font-street text-2xl text-white mb-2">STREET DEVELOPMENT</h3>
+                        <span class="text-xs font-bold text-gray-400 block mb-3">AGES 5-7 &bull; BOYS & GIRLS</span>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Builds technical confidence, quick 1v1 moves, and creative decision-making.</p>
+                    </div>
+                    <a href="#booking-section" class="text-center bg-bajaGreen/20 hover:bg-bajaGreen text-bajaGreen hover:text-white font-bold py-2 rounded-lg text-sm transition-colors mt-2 block">
+                        Reserve Stage 2 &rarr;
+                    </a>
+                </div>
+
+                <!-- STAGE 3 -->
+                <div class="bg-bajaCard border-2 border-bajaCyan/40 rounded-2xl p-6 flex flex-col justify-between hover:border-bajaCyan transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fa-solid fa-chess-board text-bajaCyan text-3xl"></i>
+                            <span class="bg-bajaCyan/20 text-bajaCyan font-black text-xs px-2.5 py-1 rounded">STAGE 3</span>
+                        </div>
+                        <h3 class="font-street text-2xl text-white mb-2">DEVELOPMENT TEAMS</h3>
+                        <span class="text-xs font-bold text-gray-400 block mb-3">AGES 8+ &bull; BOYS & GIRLS</span>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Adds tactical team understanding, structured futsal rotations, and high-tempo games.</p>
+                    </div>
+                    <a href="#booking-section" class="text-center bg-bajaCyan/20 hover:bg-bajaCyan text-bajaCyan hover:text-black font-bold py-2 rounded-lg text-sm transition-colors mt-2 block">
+                        Reserve Stage 3 &rarr;
+                    </a>
+                </div>
+
+                <!-- STAGE 4 -->
+                <div class="bg-bajaCard border-2 border-bajaYellow/40 rounded-2xl p-6 flex flex-col justify-between hover:border-bajaYellow transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fa-solid fa-trophy text-bajaYellow text-3xl"></i>
+                            <span class="bg-bajaYellow/20 text-bajaYellow font-black text-xs px-2.5 py-1 rounded">STAGE 4</span>
+                        </div>
+                        <h3 class="font-street text-2xl text-white mb-2">SELECT TEAMS</h3>
+                        <span class="text-xs font-bold text-gray-400 block mb-3">AGES 8+ &bull; BOYS & GIRLS</span>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">Elite competitive teams competing in state-level tournaments and international matches in Mexico.</p>
+                    </div>
+                    <a href="#booking-section" class="text-center bg-bajaYellow/20 hover:bg-bajaYellow text-bajaYellow hover:text-black font-bold py-2 rounded-lg text-sm transition-colors mt-2 block">
+                        Reserve Stage 4 &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PROGRAMS SECTION -->
+        <section id="programs" class="py-16 px-4 max-w-7xl mx-auto border-t border-white/10">
+            <div class="text-center mb-12">
+                <span class="font-bebas text-bajaPink text-2xl uppercase tracking-widest font-bold">WHAT WE OFFER</span>
+                <h2 class="text-4xl sm:text-5xl font-black uppercase text-white tracking-tight mt-1">ACADEMY <span class="text-bajaCyan">PROGRAMS</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-bajaCard p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-users text-bajaPink text-3xl mb-3"></i>
+                    <h3 class="font-bebas text-2xl text-white tracking-wide">WEEKLY TEAM TRAINING</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">High-tempo sessions emphasizing tight ball control and rapid decision-making under high pressure.</p>
+                </div>
+                <div class="bg-bajaCard p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-hands-holding text-bajaCyan text-3xl mb-3"></i>
+                    <h3 class="font-bebas text-2xl text-white tracking-wide">GOALKEEPER PROGRAM</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Positioning and reaction drills unique to the rapid pace, small goals, and quick shots of futsal.</p>
+                </div>
+                <div class="bg-bajaCard p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-bolt text-bajaYellow text-3xl mb-3"></i>
+                    <h3 class="font-bebas text-2xl text-white tracking-wide">STREET FLAIR & 1v1</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Unstructured play sessions designed to encourage creativity, freedom, and individual expression.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EMBEDDED BOOKING & SCHEDULING WIDGET SECTION ================= -->
+        <section id="booking-section" class="py-20 px-4 max-w-5xl mx-auto border-t border-white/10">
+            
+            <div class="text-center mb-10">
+                <span class="font-bebas text-bajaCyan text-2xl tracking-widest font-bold">ONLINE REGISTRATION & PAYMENTS</span>
+                <h2 class="text-4xl sm:text-6xl font-black uppercase text-white tracking-tight">
+                    BOOK YOUR <span class="font-street text-bajaPink text-glow-pink">SESSION</span>
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+                    Select open spots below. Live availability, automated slot tracking, waivers, and secure checkout are handled securely in real-time.
+                </p>
+            </div>
+
+            <!-- INSTRUCTION BOX FOR THE DEVELOPER / SITE OWNER -->
+            <div class="bg-gradient-to-r from-yellow-950/60 via-bajaCard to-yellow-950/60 border-2 border-bajaYellow/40 rounded-2xl p-5 mb-8 text-xs text-yellow-200 shadow-xl">
+                <div class="flex items-start space-x-3">
+                    <i class="fa-solid fa-circle-info text-bajaYellow text-xl flex-shrink-0 mt-0.5"></i>
+                    <div class="space-y-1">
+                        <strong class="font-mono text-bajaYellow text-sm block uppercase">💡 GitHub Pages Embed Instructions:</strong>
+                        <p class="text-gray-300">
+                            When hosting on GitHub Pages, simply paste your <strong>Acuity Scheduling</strong>, <strong>Square Appointments</strong>, or <strong>Calendly</strong> embed iframe code directly into the placeholder container below (search for <code>&lt;!-- EMBEDDED SCHEDULING WIDGET GOES HERE --&gt;</code> in <code>index.html</code>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCHEDULING WIDGET CONTAINER -->
+            <div class="bg-bajaCard border-2 border-white/10 rounded-3xl p-4 sm:p-8 shadow-2xl overflow-hidden min-h-[500px] flex items-center justify-center relative">
+                
+                <!-- ======================================================================= -->
+                <!--           <!-- EMBEDDED SCHEDULING WIDGET GOES HERE -->                 -->
+                <!--  REPLACE THE PLACEHOLDER BELOW WITH YOUR ACUITY/SQUARE/CALENDLY IFRAME  -->
+                <!-- ======================================================================= -->
+
+                <div class="w-full text-center space-y-6 py-12 px-4">
+                    <div class="w-20 h-20 bg-bajaPink/20 text-bajaPink rounded-full flex items-center justify-center text-4xl mx-auto border border-bajaPink/40">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="font-bebas text-3xl text-white uppercase tracking-wider">Live Scheduling Calendar</h3>
+                        <p class="text-gray-400 text-sm max-w-md mx-auto">
+                            Replace this box with your provider's embed snippet. Below are examples of how easy it is to drop in your code:
+                        </p>
+                    </div>
+
+                    <!-- CODE EXAMPLE SNIPPETS FOR ACUITY & SQUARE -->
+                    <div class="bg-bajaBg p-4 rounded-xl border border-white/10 max-w-xl mx-auto text-left font-mono text-[11px] text-gray-300 space-y-3 overflow-x-auto">
+                        <div>
+                            <span class="text-bajaCyan font-bold">// Example 1: Acuity Scheduling Embed Code</span>
+                            <div class="text-gray-400 mt-1 select-all">&lt;iframe src="https://app.acuityscheduling.com/schedule.php?owner=YOUR_ID" width="100%" height="600" frameborder="0"&gt;&lt;/iframe&gt;</div>
+                        </div>
+                        <div class="pt-2 border-t border-white/10">
+                            <span class="text-bajaYellow font-bold">// Example 2: Square Appointments Widget</span>
+                            <div class="text-gray-400 mt-1 select-all">&lt;script src='https://square.site/appointments/buyer/widget/YOUR_WIDGET.js'&gt;&lt;/script&gt;</div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500 italic">
+                        Works 100% free with GitHub Pages HTTPS hosting!
+                    </p>
+                </div>
+
+                <!-- ======================================================================= -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-bajaBg border-t border-white/10 py-12 px-4 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <div class="font-street text-xl text-white">SD BAJA FUTSAL CLUB</div>
+            <p class="text-gray-400">Tijuana &bull; San Diego &bull; Cross-Border Expressive Futsal</p>
+            <p>&copy; SD Baja Futsal Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
